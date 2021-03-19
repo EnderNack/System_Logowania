@@ -3,12 +3,32 @@ body,html
 padding: 0;
 margin: 0;
 font-family: sans-serif;
+background-color: grey;
 }
 
 .panel
 {
+    border: 0;
     width: 250px;
     display: block;
     text-align: center;
-    
+    margin-left: 40%;
+    margin-top: 10%;
+    color: white;
+    background-color: #242526;
+
+
+}
+.panel input[type = "text"],.panel input[type = "password"],.panel input[type = "email"],.panel input[type = "number"]
+{
+    text-align: center;
+    width: 120px;
+    border:solid 1px orange;
+    margin: 10px; 
+    background: none;
+    border-radius: 50px;
+
+}
+.stopka{
+    color: white;
 }
