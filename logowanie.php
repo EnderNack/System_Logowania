@@ -14,6 +14,7 @@
                         <h1>LOGOWANIE</h1>
                         <input type="text" placeholder="Login:" required>
                         <input type="password" placeholder="Hasło:" required>
+                        <input type="submit" value="ZALOGUJ"> 
                 </form>
             </fieldset>
         </div>
