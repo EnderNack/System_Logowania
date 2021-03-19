@@ -1,0 +1,14 @@
+body,html
+{
+padding: 0;
+margin: 0;
+font-family: sans-serif;
+}
+
+.panel
+{
+    width: 250px;
+    display: block;
+    text-align: center;
+    
+}
