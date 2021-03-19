@@ -1,0 +1,48 @@
+body,html
+{
+padding: 0;
+margin: 0;
+font-family: sans-serif;
+background-color: grey;
+}
+
+.lewo{
+    float:left;
+}
+.panel
+{
+    border: 0;
+    width: 432px;
+    height:500px;
+    display: block;
+    text-align: center;
+    color: white;
+    background-color: #242526;
+
+
+}
+.panel input[type = "text"],.panel input[type = "password"],.panel input[type = "email"],.panel input[type = "number"]
+{
+    text-align: center;
+    width: 120px;
+    border:solid 1px orange;
+    margin: 10px; 
+    background: none;
+    border-radius: 50px;
+
+}
+#stopka{
+    color: orange;
+    background-color:#242526;
+    width:100%;
+    height:56px;
+    font-size:26px;
+    text-align:center;
+    clear:both;
+}
+.prawo{
+    float:left;
+    width:864px;
+    height:500px;
+    background-color:lightblue;
+}

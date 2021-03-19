@@ -1,18 +1,18 @@
 <?php
-
 $host = "localhost";
-$username = "root";
-$password = "";
+$user = "root";
+$haslo = "";
 $dbname = "bazaprojekt";
 $port = 3306;
 
-$polaczenie = @new Mysqli($host, $username, $password, $dbname, $port);
+$poloczenie = @new Mysqli($host,$user,$haslo,$dbname,$port);
+
 if(mysqli_connect_errno()!=0){
-    echo("Błąd połączenia do bazy danych".Mysqli_connect_error());
-}echo("Połączono do bazy danych");
-
-
-
-
+    echo("Błąd połączenia do bazy danych");
+}
+else{
+    echo("Połączono do bazy danych");
+}
 
 ?>
+
