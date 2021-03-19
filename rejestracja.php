@@ -14,14 +14,14 @@
         <div class="panel">
                 <form action="" method="post">
                     <h1>REJESTRACJA</h1>
-                    <input type="text" placeholder="Imię:" required>
-                    <input type="text" placeholder="Nazwisko:" required>
-                    <input type="text" placeholder="Login:" required>
-                    <input type="password" placeholder="Hasło:" required>
-                    <input type="password" placeholder="Powtórz hasło" required>
-                    <input type="text" placeholder="Adres" required>
-                    <input type="number" step=9 placeholder="Nr. tel:" required> 
-                    <input type="email" placeholder="Email:" required> <br>
+                    <input type="text" name="imie" placeholder="Imię:" required>
+                    <input type="text" name="nazwisko" placeholder="Nazwisko:" required>
+                    <input type="text" name="login" placeholder="Login:" required>
+                    <input type="password" name="haslo1" placeholder="Hasło:" required>
+                    <input type="password" name="haslo2" placeholder="Powtórz hasło" required>
+                    <input type="text" name="adres" placeholder="Adres" required>
+                    <input type="number" name="nrtel" step=9 placeholder="Nr. tel:" required> 
+                    <input type="email" name="email" placeholder="Email:" required> <br>
                     <input type="submit">  
                 </form>
         </div>
