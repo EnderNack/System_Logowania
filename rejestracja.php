@@ -8,26 +8,56 @@
     <title>Panel rejestracji</title>
 </head>
 <body>
-        <div class="navbar">
-            
-        </div>
         <div class="panel">
-                <form action="" method="post">
-                    <h1>REJESTRACJA</h1>
-                    <input type="text" name="imie" placeholder="Imię:" required>
-                    <input type="text" name="nazwisko" placeholder="Nazwisko:" required>
-                    <input type="text" name="login" placeholder="Login:" required>
-                    <input type="password" name="haslo1" placeholder="Hasło:" required>
-                    <input type="password" name="haslo2" placeholder="Powtórz hasło" required>
-                    <input type="text" name="adres" placeholder="Adres" required>
-                    <input type="number" name="nrtel" step=9 placeholder="Nr. tel:" required> 
-                    <input type="email" name="email" placeholder="Email:" required> <br>
-                    <input type="submit">  
-                </form>
-        </div>
-        <div class="stopka">
-       Piotr Pająk, Kacper Wilczek, Filip Urzoń, Łukasz Mieczkowski, Patryk Widomski, Weronika , System_Logowania
 
+                <fieldset>
+                <form action="" method="post">
+                <input type="text" placeholder="Imię:" required>
+                <input type="text" placeholder="Nazwisko:" required>
+                <input type="text" placeholder="Login:" required>
+                <input type="password" placeholder="Hasło:" required>
+                <input type="password" placeholder="Powtórz hasło" required>
+                <input type="text" placeholder="Adres" required>
+                <input type="number" step=9 placeholder="Nr. tel:" required> 
+                <input type="email" placeholder="Email:" required> <br>
+                <input type="submit">  
+                 </form>
+                </fieldset> 
+           
+                
         </div>
+        <?php
+
+if(isset($_POST['submit'])){
+
+    if($_POST['haslo1'] == $_POST['haslo2']){
+
+        $login = htmlspecialchars($_POST['login']);
+        $haslo = htmlspecialchars($_POST['haslo1']);
+        $imie = htmlspecialchars($_POST['imie']);
+        $nazwisko = htmlspecialchars($_POST['nazwisko']);
+        $email = htmlspecialchars($_POST['email']);
+        $zapytanie_sprawdz = $polaczenie->query("SELECT login FROM rejestracja WHERE login ='$login'");
+        if(mysqli_num_rows($zapytanie_sprawdz)){
+            echo("Podany login w bazie już istnieje <br>");
+        } else{
+
+            $zapytanie_dodajdobazy = $polaczenie->query("INSERT INTO rejestracja(login,haslo, imie, nazwisko, email) values('$login','$haslo','$imie','$nazwisko','$email')");
+
+        if(mysqli_affected_rows($polaczenie)){
+            echo("Dodano nowy rekor do bazy danych");
+        }
+        else{
+            echo("Błąd dodania do bazy danych");
+        }
+        }
+
+    }
+}
+
+
+?>
+
+
 </body>
 </html>
